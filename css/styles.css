@@ -164,7 +164,16 @@ nav {
 
 /* Hero */
 section.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--bgc-header-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/employees.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -237,11 +246,37 @@ section.hero {
 }
 
 .advantages.list .item {
-  width: 370px;
+  width: 270px;
 }
 
 .advantages.list .item:not(:last-child) {
   margin-right: 30px;
+}
+.advantages.list .item::before {
+  background-color: var(--btn-grey-color);
+  display: block;
+  content: '';
+  height: 120px;
+  border-radius: 4px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
 }
 
 .advantages .title {
@@ -254,6 +289,7 @@ section.hero {
   letter-spacing: 0.03em;
 
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .advantages .desc {
